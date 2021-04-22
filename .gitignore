@@ -1,0 +1,5 @@
+*.doc*
+*.pdf*
+raw/**
+curated/**
+analytics/**
