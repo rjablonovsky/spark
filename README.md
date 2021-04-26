@@ -21,7 +21,7 @@ Data from https://www.kaggle.com/open-powerlifting/powerlifting-database/downloa
 
 ### Installing
 
-Follow steps available:
+Follow links:
 
 ```
 https://kontext.tech/column/spark/311/apache-spark-243-installation-on-windows-10-using-windows-subsystem-for-linux
