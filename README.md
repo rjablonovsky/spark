@@ -22,12 +22,9 @@ Data from https://www.kaggle.com/open-powerlifting/powerlifting-database/downloa
 ### Installing
 
 Follow links:
-
-```
 [Install Apache Spark on Windows 10 using WSL](https://kontext.tech/column/spark/311/apache-spark-243-installation-on-windows-10-using-windows-subsystem-for-linux)
 [Install Hadoop Single Cluster](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 [Hadoop 3.2.2 source](https://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-3.2.2/)
-```
 
 Example of the run:
 ```
