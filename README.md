@@ -15,26 +15,24 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Python (3.6 to 3.8), Apache Spark 3.1+ (Hadoop 3.0+)
+Data from https://www.kaggle.com/open-powerlifting/powerlifting-database/download
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Follow steps available:
 
 ```
-Give the example
+https://kontext.tech/column/spark/311/apache-spark-243-installation-on-windows-10-using-windows-subsystem-for-linux
+https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
+Haddop source: https://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-3.2.2/
 ```
 
-And repeat
-
+Example of the run:
 ```
-until finished
+pyspark < src/convert_csv_to_parquet.py
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -58,13 +56,11 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Copy to target system should work
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Angelou](https://pypi.org/project/angelou/) - Intention to use Angelou
 
 ## Versioning
 
@@ -82,7 +78,5 @@ This project is licensed under the BSD License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Hat tip to data analytic community, google, github
 
