@@ -1,6 +1,9 @@
 *.txt*
 *.doc*
 *.pdf*
+*.log*
 raw/**
 curated/**
 analytics/**
+log/**
+metastore_db/
