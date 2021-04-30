@@ -26,10 +26,7 @@ record_holder_wl_by_country_deadlift='analytics/record_holder_wl_by_country_in_d
 df = spark.read.parquet("curated/openpowerlifting")
 
 # show data to browse
-df.select("wlName","Sex","Event","Equipment","Age","AgeClass","Division","BodyweightKg","WeightClassKg", \
-          "wlSquat1Kg","wlSquat2Kg","wlSquat3Kg","Squat4Kg","wlBest3SquatKg","Best3DeadliftKg", \
-		  "wlPlace","wlCountry","Country","MeetCountry","MeetName") \
-		.filter("wlBest3SquatKg IS NOT NULL").show(20);
+df.select().filter("wlBest3SquatKg IS NOT NULL").show(20);
 
 ### Compute the percentage with which weighlifters achieve their best squad result in their first, second and third attempt each.
 # Approach 1 - with data quality checking and logic inside calculation:
