@@ -7,3 +7,4 @@ curated/**
 analytics/**
 log/**
 metastore_db/
+tests/**
