@@ -22,8 +22,8 @@ Follow links:
 * [Install Apache Spark on Windows 10 using WSL](https://kontext.tech/column/spark/311/apache-spark-243-installation-on-windows-10-using-windows-subsystem-for-linux)
 * [Install Hadoop Single Cluster](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 * [Hadoop 3.2.2 source](https://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-3.2.2/)
-* [pandas] (https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html) or use: pip install pandas, pip install pyspark-pandas
-* [pytest] (https://docs.pytest.org/en/6.2.x/getting-started.html)
+* [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html) or use: pip install pandas, pip install pyspark-pandas
+* [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html)
 
 Example of the run:
 ```
@@ -37,7 +37,7 @@ To run the automated tests for this system, pandas and pytest have to be install
 
 ### Break down into end to end tests
 
-Tests are focusing on evaluate ETL transformation. Analytic calculations checks are focusing on calculation the same output using different formulas/algorithms that should get the same result. Resusts sets check require inspection or add more tests. Example of the test run:
+Tests are focusing on evaluate ETL transformation. Analytic calculations checks are focusing on calculation the same output using different formulas/algorithms that should get the same result. To check calculation requires output files/log inspection or add more automatic tests. Example of the test run:
 
 ```
 pytest < tests/test_wlConvert.py > log/test_wlConvert.log 2>&1
