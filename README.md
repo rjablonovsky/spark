@@ -1,22 +1,19 @@
-# Paceline Challenge
+# Paceline Challenge for ETL and Analytics
 
-Paceline challenge for ETL and Analytics:
-This is Paceline's take home challenge for data platform engineer applicants. The challenge is supposed to be completed in 2-4 hours, but you can take up to 7 days
-to return the challenge. The challenge consists of two parts:
+Consist of two parts:
 A basic ETL job that transforms a CSV file into parquet format
 A second job that uses the parquet files to compute some basic analytics
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
 
 ```
 Python (3.6 to 3.8), Apache Spark 3.1+ (Hadoop 3.0+)
 Data from https://www.kaggle.com/open-powerlifting/powerlifting-database/download
+To run tests pandas, pytest are needed
 ```
 
 ### Installing
@@ -25,43 +22,38 @@ Follow links:
 * [Install Apache Spark on Windows 10 using WSL](https://kontext.tech/column/spark/311/apache-spark-243-installation-on-windows-10-using-windows-subsystem-for-linux)
 * [Install Hadoop Single Cluster](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 * [Hadoop 3.2.2 source](https://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-3.2.2/)
+* [pandas] (https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html) or use: pip install pandas, pip install pyspark-pandas
+* [pytest] (https://docs.pytest.org/en/6.2.x/getting-started.html)
 
 Example of the run:
 ```
-pyspark < src/convert_csv_to_parquet.py
+pyspark < src/job_etl.py > log/job_etl.log 2>&1
+pyspark < src/job_analytics.py > log/job_analytics.log 2>&1
 ```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run the automated tests for this system, pandas and pytest have to be installed and configured
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+Tests are focusing on evaluate ETL transformation. Analytic calculations checks are focusing on calculation the same output using different formulas/algorithms that should get the same result. Resusts sets check require inspection or add more tests. Example of the test run:
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+pytest < tests/test_wlConvert.py > log/test_wlConvert.log 2>&1
 ```
 
 ## Deployment
 
-Copy to target system should work
+Copy folders and directories to target system should work
 
 ## Built With
 
-* [Angelou](https://pypi.org/project/angelou/) - Intention to use Angelou
+* [Poetry for pyspark example](https://github.com/MrPowers/angelou) - Intention to use Poetry as dependency management and wheel packaging
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/rjablonovsky/paceline/tags). 
+[SemVer](http://semver.org/) for versioning.
 
 ## Authors
 

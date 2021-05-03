@@ -7,4 +7,6 @@ curated/**
 analytics/**
 log/**
 metastore_db/
-tests/**
+.pytest_cache/**
+src/__pycache__/**
+tests/__pycache__/**
