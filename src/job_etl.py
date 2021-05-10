@@ -38,3 +38,10 @@ dfT.repartition(1).write.mode('overwrite').parquet(curated_dir)
 
 # show 5 rows of data - sanity check
 dfT.filter("Best3SquatKg IS NOT NULL").show(5);
+# show transformed data describe statistic:
+dfT.describe().show()
+# check other data statistic:
+Squat1Kg_quantiles = dfT.approxQuantile("Squat1Kg", [0.25, 0.5, 0.75], 0.1)
+print("Squat1Kg_quantiles: ", Squat1Kg_quantiles)
+# show orginal csv file data describe statistic:
+dfS.describe('Name','Squat1Kg','Squat2Kg','Squat3Kg','Best3SquatKg','Place','Country','MeetCountry','Best3DeadliftKg').show()
