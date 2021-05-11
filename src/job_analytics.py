@@ -58,5 +58,8 @@ wlUtil.writeDFtoCSVfile(percFirstBestSquatDF2, first_wl_percsquad_in_123_attemp+
 # If Country is null replace it with MeetCountry. 
 #   Assumption 1 - the non-international competition did not provide information about Country and MeetCouintry is good substitute
 #   Assumption 2 - the Best3DeadliftKg is reliable enough for identifying recordholder 
-wlNameRecordInDeadliftKgDF = wlCalc.getNameRecordInDeadliftKg(dfT)
+wlNameRecordInDeadliftKgDF = wlCalc.getNameRecordInDeadliftKg_Formula1(dfT)
 wlUtil.writeDFtoCSVfile(wlNameRecordInDeadliftKgDF, record_holder_wl_by_country_deadlift)
+# Formula 2 - using window functions
+wlNameRecordInDeadliftKgDF = wlCalc.getNameRecordInDeadliftKg_Formula2(dfT)
+wlUtil.writeDFtoCSVfile(wlNameRecordInDeadliftKgDF, record_holder_wl_by_country_deadlift+'2')

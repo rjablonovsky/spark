@@ -2,6 +2,7 @@
 #
 from pyspark.sql.types import ArrayType, StructField, StructType, StringType, LongType, DoubleType
 from pyspark.sql import functions as F
+from pyspark.sql.window import Window
 
 
 def calcPercBestSquat_Formula1(spark, dfT):
@@ -86,7 +87,7 @@ def calcPercFirstBestSquat_Formula2(spark, dfT):
 	percFirstBestSquat = [(countFirstBest3SquatKg,percFirstBestSquat1Kg,percFirstBestSquat2Kg,percFirstBestSquat3Kg)]
 	return spark.createDataFrame(data=percFirstBestSquat, schema=percFirstBestSquatSchema)
 	
-def getNameRecordInDeadliftKg(dfT):	
+def getNameRecordInDeadliftKg_Formula1(dfT):	
 	### For each country, determine the weighlifter who holds the record in deadlifting over the whole dataset.
 	# add not null country column to dataset and if Country is null replace it with MeetCountry. 
 	#   Assumption 1 - the non-international competition did not provide information about Country
@@ -97,3 +98,11 @@ def getNameRecordInDeadliftKg(dfT):
 				& (F.col("wldf.Best3DeadliftKg") == F.col("dfT.Best3DeadliftKg")),"inner") \
 			.select(F.col("wldf.Country"), F.col("wldf.Best3DeadliftKg"), F.col("dfT.Name")) \
 			.distinct().sort("Country","Name")
+
+def getNameRecordInDeadliftKg_Formula2(dfT):	
+	### For each country, determine the weighlifter who holds the record in deadlifting over the whole dataset.
+	# add not null country column to dataset and if Country is null replace it with MeetCountry. 
+	#   Assumption 1 - the non-international competition did not provide information about Country
+	#   Assumption 2 - the Best3DeadliftKg is reliable enough for identifying recordholder
+	return dfT.withColumn("rank",F.rank().over(Window.partitionBy("Country").orderBy(F.desc("Best3DeadliftKg")))) \
+			.select("Country", "Best3DeadliftKg", "Name").filter("rank = 1").distinct().sort("Country","Name")
