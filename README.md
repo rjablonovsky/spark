@@ -1,8 +1,8 @@
 # Paceline Challenge for ETL and Analytics
 
 Consist of two parts:
-A basic ETL job that transforms a CSV file into parquet format
-A second job that uses the parquet files to compute some basic analytics
+1) basic ETL job that transforms a CSV file into parquet format
+2) second job that uses the parquet files to compute some basic analytics
 
 ## Getting Started
 
