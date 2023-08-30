@@ -1,4 +1,4 @@
-# Paceline Challenge for ETL and Analytics
+# Spark Challenge for ETL and Analytics
 
 Consist of two parts:
 1) basic ETL job that transforms a CSV file into parquet format
@@ -57,9 +57,9 @@ Copy folders and directories to target system should work
 
 ## Authors
 
-* **Radovan Jablonovsky** - *Initial work* - [Paceline](https://github.com/rjablonovsky/paceline)
+* **Radovan Jablonovsky** - *Initial work* - [Spark](https://github.com/rjablonovsky/spark)
 
-See also the list of [contributors](https://github.com/rjablonovsky/paceline/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/rjablonovsky/spark/contributors) who participated in this project.
 
 ## License
 
