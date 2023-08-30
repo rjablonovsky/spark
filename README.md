@@ -1,8 +1,8 @@
-# Spark Challenge for ETL and Analytics
+# Spark challenge for ETL and Analytics
 
 Consist of two parts:
 1) basic ETL job that transforms a CSV file into parquet format
-2) second job that uses the parquet files to compute some basic analytics
+2) job that uses the parquet files to compute some basic analytics
 
 ## Getting Started
 
