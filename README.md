@@ -47,10 +47,6 @@ pytest < tests/test_wlConvert.py > log/test_wlConvert.log 2>&1
 
 Copy folders and directories to target system should work
 
-## Built With
-
-* [Poetry for pyspark example](https://github.com/MrPowers/angelou) - Intention to use Poetry as dependency management and wheel packaging
-
 ## Versioning
 
 [SemVer](http://semver.org/) for versioning.
