@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-Python (3.6 to 3.8), Apache Spark 3.1+ (Hadoop 3.0+)
+Python (3.8), Apache Spark 3.1+ (Hadoop 3.0+)
 Data from https://www.kaggle.com/open-powerlifting/powerlifting-database/download
 To run tests pandas, pytest are needed
 ```
@@ -21,7 +21,7 @@ To run tests pandas, pytest are needed
 Follow links:
 * [Install Apache Spark on Windows 10 using WSL](https://kontext.tech/column/spark/311/apache-spark-243-installation-on-windows-10-using-windows-subsystem-for-linux)
 * [Install Hadoop Single Cluster](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
-* [Hadoop 3.2.2 source](https://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-3.2.2/)
+* [Hadoop 3.2.2 source](https://hadoop.apache.org/release/3.2.2.html)
 * [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html) or use: pip install pandas, pip install pyspark-pandas
 * [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html)
 
